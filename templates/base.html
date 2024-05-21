@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/game.css')}}">
+</head>
+
+<body>
+    <p>{% block language %} {% endblock %}</p>
+    <div class="wrap_content">
+        <div class="question"></div>
+        <div class="result"></div>
+        <div class="wrap_button">
+            <div class="button_show">
+                Hiện đáp án
+            </div>
+            <div class="button_next" onclick="nextGame()">
+                Tiếp tục
+            </div>
+        </div>
+    </div>
+    {% block titlejs %} {% endblock %}
+
+</body>
+
+</html>
